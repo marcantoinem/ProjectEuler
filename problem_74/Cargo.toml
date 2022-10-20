@@ -1,0 +1,16 @@
+[package]
+name = "e_2022_74"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# primal = "0.3"
+# itertools = "0.10"
+# num = "0.4"
+rayon = "1.5.3"
+math_arsenal = { path = "/home/lemark/Projets/rust/math_arsenal/" }
+
+[profile.dev]
+opt-level = 3
