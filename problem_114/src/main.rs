@@ -1,5 +1,8 @@
 use malachite::integer::Integer;
+use std::time::Instant;
+
 fn main() {
+    let instant = Instant::now();
     let end = 50;
     let mut number_of_way = vec![Integer::from(1); end + 1];
     for size in 3..=end {
@@ -16,6 +19,10 @@ fn main() {
             }
         }
     }
-    println!("{:?}", number_of_way);
+    println!(
+        "{:?}, {:.8}s",
+        number_of_way,
+        instant.elapsed().as_secs_f64()
+    );
     println!("{}", number_of_way[50]);
 }
